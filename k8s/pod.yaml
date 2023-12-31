@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api
+  labels:
+    name: api
+spec:
+  containers:
+  - name: api
+    image: akhonya/api:0.0.1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 5000
