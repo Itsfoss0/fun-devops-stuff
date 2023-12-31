@@ -1,0 +1,5 @@
+# Project requiremts
+
+flask
+flask-cors
+
