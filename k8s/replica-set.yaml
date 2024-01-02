@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: api-rs
+  labels:
+    name: api-rs
+
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      name:  api-rs
+  template:
+    metadata:
+      labels:
+        name:  api-rs
+    spec:
+      containers:
+        - image:  akhonya/api:0.0.1
+          name:  api-server
